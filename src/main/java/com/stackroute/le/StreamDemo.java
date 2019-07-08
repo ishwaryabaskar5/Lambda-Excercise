@@ -18,7 +18,7 @@ public class StreamDemo {
 		places.add("USA, New York");
 		places.add("Africa, Nigeria");
 		Stream<String>  stream = places.stream();
-		stream.filter(city ->  city.startsWith("Nepal, ")).forEach(System.out::println);
+		stream.filter(city ->  city.startsWith("Nepal, ")).map(city-> city.replace("Nepal, ","")).forEach(System.out::println);
 	}
 	
 }
